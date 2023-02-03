@@ -1,0 +1,11 @@
+SETUP:
+    npm init
+    npm i -D typescript tsc tsc-watch rimraf @types/express
+    npm i express body-parser multer ejs mongoose validator
+    npm install @types/mongoose --save-dev
+API:
+    getAll:http://localhost:8080/student
+    findByID:http://localhost:8080/student/:id
+    Create:http://localhost:8080/student
+    Edit:http://localhost:8080/student/:id
+    Delete:http://localhost:8080/student/:id
