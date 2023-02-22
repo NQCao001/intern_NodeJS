@@ -3,13 +3,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserService = void 0;
+exports.AdinService = void 0;
 const data_source_1 = require("../data-source");
 const admin_1 = require("../model/admin");
 const bcrypt_1 = __importDefault(require("bcrypt"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const auth_1 = require("../middleware/auth");
-class UserService {
+class AdinService {
     constructor() {
         this.checkLogin = async (userLogin) => {
             let user = {
@@ -43,5 +43,5 @@ class UserService {
         });
     }
 }
-exports.UserService = UserService;
+exports.AdinService = AdinService;
 //# sourceMappingURL=adin-service.js.map
