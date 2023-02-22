@@ -9,7 +9,9 @@ export class Students{
     @Column({type: 'varchar'})
     public sex: string;
     @Column({type: 'varchar'})
-    public birthday: string;
+    public email: string;
     @Column({type: 'varchar'})
     public address: string;
+    @Column({type: 'int'})
+    public point: number;
 }

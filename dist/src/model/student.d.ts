@@ -2,6 +2,7 @@ export declare class Students {
     id: number;
     name: string;
     sex: string;
-    birthday: string;
+    email: string;
     address: string;
+    point: number;
 }
