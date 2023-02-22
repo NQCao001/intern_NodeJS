@@ -1,8 +1,5 @@
 import {AppDataSource} from "../data-source";
 import {Admin} from "../model/admin";
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken"
-import {SECRET} from "../middleware/auth";
 
 
 export class AdminService {

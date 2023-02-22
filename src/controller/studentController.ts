@@ -2,16 +2,18 @@ import {Request, Response} from "express";
 
 import {StudentService} from "../service/studentService";
 
-export class StudentController{
-    private studentService:StudentService;
+export class StudentController {
+    private studentService: StudentService;
+
     constructor() {
         this.studentService = new StudentService()
     }
-    getAll =async (req: Request, res: Response) => {
-        try{
+
+    getAll = async (req: Request, res: Response) => {
+        try {
             let students = await this.studentService.getAll()
             res.json(students)
-        } catch (e){
+        } catch (e) {
             res.json({
                 mess: e.message
             })
@@ -20,6 +22,16 @@ export class StudentController{
     findById = async (req: Request, res: Response) => {
         try {
             let student = await this.studentService.findStudent(req.params.id);
+            res.json(student)
+        } catch (e) {
+            res.json({
+                mess: e.message
+            })
+        }
+    }
+    findByName = async (req: Request, res: Response) => {
+        try {
+            let student = await this.studentService.findByName(req.body.name);
             res.json(student)
         } catch (e) {
             res.json({
@@ -52,7 +64,7 @@ export class StudentController{
             })
         }
     }
-    deleteStudent = async (req: Request, res: Response)=>{
+    deleteStudent = async (req: Request, res: Response) => {
         try {
             await this.studentService.delete(req.params.id);
             res.json({
@@ -65,4 +77,5 @@ export class StudentController{
         }
     }
 }
+
 export default new StudentController();

@@ -11,6 +11,9 @@ export class StudentService{
     getAll = async () => {
         return await this.studentRepository.find()
     }
+    findByName = async (name)=>{
+        return await this.studentRepository.query(`select name from students where name like '%${name}%'`)
+    }
     findStudent = async(id)  =>{
         return await this.studentRepository.findBy({id:id})
     }

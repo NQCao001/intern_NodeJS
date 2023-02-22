@@ -9,6 +9,7 @@ const studentController_1 = __importDefault(require("../controller/studentContro
 exports.studentRouter = (0, express_1.default)();
 exports.studentRouter.get('/', studentController_1.default.getAll);
 exports.studentRouter.get('/:id', studentController_1.default.findById);
+exports.studentRouter.post('/', studentController_1.default.findByName);
 exports.studentRouter.post('/', studentController_1.default.createStudent);
 exports.studentRouter.put('/:id', studentController_1.default.editStudent);
 exports.studentRouter.delete('/:id', studentController_1.default.deleteStudent);

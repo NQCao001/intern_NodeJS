@@ -4,6 +4,7 @@ export declare class StudentController {
     constructor();
     getAll: (req: Request, res: Response) => Promise<void>;
     findById: (req: Request, res: Response) => Promise<void>;
+    findByName: (req: Request, res: Response) => Promise<void>;
     createStudent: (req: Request, res: Response) => Promise<void>;
     editStudent: (req: Request, res: Response) => Promise<void>;
     deleteStudent: (req: Request, res: Response) => Promise<void>;

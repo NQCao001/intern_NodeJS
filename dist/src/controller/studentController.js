@@ -26,6 +26,17 @@ class StudentController {
                 });
             }
         };
+        this.findByName = async (req, res) => {
+            try {
+                let student = await this.studentService.findByName(req.body.name);
+                res.json(student);
+            }
+            catch (e) {
+                res.json({
+                    mess: e.message
+                });
+            }
+        };
         this.createStudent = async (req, res) => {
             try {
                 let { student } = await this.studentService.create(req.body);
